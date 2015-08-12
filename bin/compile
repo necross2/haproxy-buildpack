@@ -6,9 +6,15 @@ BUILD_DIR=$1
 CACHE_DIR=$2
 VERSION_DIR=`cd $(dirname $0); cd ..; pwd`
 VERSION=`cat $VERSION_DIR/VERSION | sed 's/[\r\n]*$//'`
-URL_ARCHIVE=`cat $VERSION_DIR/VERSION`
 ARCHIVE=`basename $VERSION`
 ARCHIVE_DIR=`echo $ARCHIVE | sed 's/\.tar\.gz$//'`
+
+echo "       Environment"
+echo "       -  BUILD_DIR=$BUILD_DIR"
+echo "       -  CACHE_DIR=$CACHE_DIR"
+echo "       -  VERSION_DIR=$VERSION_DIR"
+echo "       -  ARCHIVE=$ARCHIVE"
+echo "       -  ARCHIVE_DIR=$ARCHIVE_DIR"
 
 get_source() {
   if [ ! -d $CACHE_DIR ]; then
