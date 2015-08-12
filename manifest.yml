@@ -1,0 +1,22 @@
+---
+language: ruby
+
+exclude_files:
+  - ".git/"
+  - ".gitignore"
+  - ".gitmodules"
+  - cf_spec/
+  - log/
+  - tests/
+  - cf.Gemfile
+  - cf.Gemfile.lock
+  - bin/package
+  - buildpack-packager/
+
+dependencies:
+ - name: haproxy
+   version: 1.5.14
+   uri: http://www.haproxy.org/download/1.5/src/haproxy-1.5.14.tar.gz
+   cf_stacks:
+      - cflinuxfs2
+   md5: c1a90dbd06c323f04bbaaa1b1c2c07e1
