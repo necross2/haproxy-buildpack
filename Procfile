@@ -1,1 +1,1 @@
-web: ./bin/compile
+web: ./haproxy -f haproxy.cfg
